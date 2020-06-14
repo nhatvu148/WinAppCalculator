@@ -132,6 +132,19 @@
                 Content="="
                 Margin="5"
                 Grid.Row="5"
-                Grid.Column="3"/>
+                Grid.Column="3"
+        >
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="FontSize"
+                                    Value="30"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Window>
