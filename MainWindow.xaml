@@ -20,6 +20,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label x:Name="resultLabel"
                Content="0" 
@@ -146,5 +147,26 @@
                 </Style>
             </Button.Style>
         </Button>
+        <StackPanel Grid.Row="6"
+                    Grid.ColumnSpan="4">
+            <!-- TextBox is the target -->
+            <!--Path=Background,-->
+            <TextBox Name="MyTextBox"
+                     Margin="5"
+                     Text="{Binding ElementName=MySlider,
+                     Path=Value,
+                     Mode=TwoWay,
+                     UpdateSourceTrigger=PropertyChanged}"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     />
+            <!-- Slider is the binding source -->
+            <!--Background="AntiqueWhite"-->
+            <Slider  Name="MySlider"
+                     IsSnapToTickEnabled="True"
+                     Maximum="100"
+                     Minimum="0"
+                     />
+        </StackPanel>
     </Grid>
 </Window>

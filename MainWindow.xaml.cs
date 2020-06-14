@@ -27,6 +27,9 @@ namespace WpfApp3
         {
             InitializeComponent();
 
+            MySlider.Value = 30;
+            MyTextBox.Text = MySlider.Value.ToString();
+
             acBtn.Click += AcBtn_Click;
             negBtn.Click += NegBtn_Click;
             percentBtn.Click += PercentBtn_Click;
